@@ -19,5 +19,8 @@ git clone --recurse-submodules git@github.com:deni/python-signify-wrapper.git si
 ```
 git submodule -b abranch -- /url/of/submodule/repo
 ```
+```
+git submodule update --remote --recursive
+```
 
 ## Example
