@@ -40,3 +40,39 @@ def signed(data, publickey, signature):
 		return True
 	else:
 		return False
+
+def sign(data, privatekey):
+	signature = str()
+
+	with tempfile.TemporaryDirectory() as tmpdir:
+		with open(tmpdir + '/data', 'w+b') as f:
+			f.write(data)
+
+		with open(tmpdir + '/key.sec', 'w') as f:
+			# Define signify template
+			template = 'untrusted comment: signify secret key\n{privatekey}\n'
+			f.write(template.format(privatekey = privatekey))
+
+		signifyCommand = ('{signify_binary} -S '
+			'-m {data} -s {privatekey} -x {signature}')
+		signifyCommand = signifyCommand.format(
+			signify_binary = signify_binary,
+			data = tmpdir + '/data',
+			privatekey = tmpdir + '/key.sec',
+			signature = tmpdir + '/data.sig',
+		)
+
+		result = subprocess.run(
+			signifyCommand.split(),
+			stdout=subprocess.DEVNULL,
+			stderr=subprocess.DEVNULL,
+		)
+
+		with open(tmpdir + '/data.sig') as f:
+			lines = f.read().splitlines()
+			signature = lines[2-1]
+
+	if signature:
+		return signature
+	else:
+		return None
