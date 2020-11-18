@@ -16,5 +16,8 @@ Remember to add install signify-openbsd
 ```
 git clone --recurse-submodules git@github.com:deni/python-signify-wrapper.git signify_wrapper
 ```
+```
+git submodule -b abranch -- /url/of/submodule/repo
+```
 
 ## Example
