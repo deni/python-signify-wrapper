@@ -12,4 +12,6 @@ Then it can be imported in Python using:
 import signify_wrapper
 ```
 
+Remember to add install signify-openbsd
+
 ## Example
