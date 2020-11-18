@@ -13,5 +13,8 @@ import signify_wrapper
 ```
 
 Remember to add install signify-openbsd
+```
+git clone --recurse-submodules git@github.com:deni/python-signify-wrapper.git signify_wrapper
+```
 
 ## Example
