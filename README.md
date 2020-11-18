@@ -4,7 +4,7 @@ Simple Python wrapper for OpenBSD's signify tool.
 ## Usage
 Start by adding this repository as a submodule in your own:
 ```
-$ git submodule add git@github.com:deni/python-signify-wrapper.git signify_wrapper
+$ git submodule add -b main git@github.com:deni/python-signify-wrapper.git signify_wrapper
 ```
 
 Then it can be imported in Python using:
