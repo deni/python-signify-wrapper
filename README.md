@@ -1,4 +1,4 @@
-# Signify (OpenBSD) Python Wrapper
+# Signify Python Wrapper
 Simple Python wrapper for [OpenBSD's signify tool](https://man.openbsd.org/signify).
 
 ## Setup
