@@ -1,31 +1,25 @@
 # Signify (OpenBSD) Python Wrapper
-Simple Python wrapper for OpenBSD's signify tool, which is described here: https://man.openbsd.org/signify
+Simple Python wrapper for [OpenBSD's signify tool](https://man.openbsd.org/signify).
 
 ## Setup
 Start by adding this repository as a submodule in your own:
 ```
-git clone --recurse-submodules git@github.com:deni/python-signify-wrapper.git signify_wrapper
-```
-```
-git submodule -b abranch -- /url/of/submodule/repo
-```
-```
-git submodule update --remote --recursive
-```
-```
-git submodule add -b main git@github.com:deni/python-signify-wrapper.git signify_wrapper
+$ git clone --recurse-submodules git@github.com:deni/python-signify-wrapper.git signify_wrapper
+$ git submodule -b abranch -- /url/of/submodule/repo
+$ git submodule update --remote --recursive
+$ git submodule add -b main git@github.com:deni/python-signify-wrapper.git signify_wrapper
 ```
 
-This will add the wrapper into your project as ``signify_wrapper`` from which you can import into your Python project. 
+This will add the wrapper into your project as ``signify_wrapper``.
 
-For the wrapper to function you need to make sure to have signify installed on your system. If you are on a Linux distribution which utilizes ``apt`` as the package manager, then you can install it using the following command:
+The signify binary is required for the wrapper to function. This can be installed on systems using ``apt`` as the package manager with the following command:
 ```
-sudo apt install signify-openbsd
+# apt install signify-openbsd
 ```
 
 Next you need to set an environment variable to point at the location where signify is installed, which can be found using the following command:
 ```
-which signify-openbsd
+$ which signify-openbsd
 ```
 Then you can make a variable and set it as an environment variable using the following commands: *(Replace x with location from previous command)*
 ```
