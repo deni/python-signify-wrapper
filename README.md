@@ -13,8 +13,10 @@ $ git submodule add -b main git@github.com:deni/python-signify-wrapper.git signi
 This will add the wrapper into your project as ``signify_wrapper``. This will make it possible to import the module into another project.
 
 The signify binary is required for the wrapper to function. Installation using common package managers:
-apt: ``# apt install signify-openbsd``
-brew: ``$ signify-osx``
+
+apt: `# apt install signify-openbsd`
+
+brew: `$ brew install signify-osx`
 
 The environment variable ``SIGNIFY_BINARY`` has to point to the binary.
 
